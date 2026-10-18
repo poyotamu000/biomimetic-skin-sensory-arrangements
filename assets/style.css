@@ -43,7 +43,19 @@
 .scope-note p{font-size:14px}
 figcaption strong{font-weight:650;color:#506b7e}
 .dialog-source{font-size:12px;text-align:center;margin-top:12px}
+.result-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.result-pair+.result-pair{margin-top:36px;padding-top:36px;border-top:1px solid var(--line)}
+.result-copy,.result-visual{min-width:0}
+.result-copy>p:not(.section-kicker){font-size:15px}
+.result-copy>.result-heading:first-child{margin-top:0}
+.result-visual{width:100%;max-width:560px;justify-self:center}
+.result-visual>figure{margin:0}
+.result-visual>.detection-chart,.result-visual>.texture-results{margin-top:0}
+.result-visual .chart-toolbar{flex-wrap:wrap}
+.result-visual figcaption{text-align:left;padding-inline:0}
 @media(max-width:800px){
+  .result-pair{grid-template-columns:1fr;gap:26px}
+  .result-pair+.result-pair{margin-top:30px;padding-top:30px}
   .study-intro{grid-template-columns:1fr;gap:28px}
   .study-intro figure{max-width:540px;margin-inline:auto}
   .study-copy h2{font-size:30px}

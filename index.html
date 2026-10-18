@@ -129,68 +129,107 @@
       </div>
     </section>
 
-    <div id="results" class="content">
+    <div id="results" class="wrap">
       <section id="spatial" class="section task-section" aria-labelledby="spatial-title">
-        <p class="section-kicker">TASK 01 · SPATIAL RESOLUTION · HIRO-NX</p>
-        <h2 id="spatial-title">Distinguishing one contact from two</h2>
-        <p>One-point stimuli and two-point stimuli separated by 5, 10, or 15 mm are classified from strain-gauge response peaks. This asks how sensor depth and number affect spatial discrimination in the skin.</p>
-        <p>Using four sensors per arrangement, B shows a pronounced improvement at 10 mm. Using all eight sensors in B and C further improves performance relative to their four shallower sensors alone.</p>
-        <figure id="figure-6"><a class="zoomable" href="assets/img/spatial-discrimination.png" aria-label="Enlarge Figure 6: spatial discrimination results"><img src="assets/img/spatial-discrimination.png" width="1800" height="1097" loading="lazy" alt="Figure 6: single- versus two-point classification accuracy at 5, 10, and 15 mm for A and for four- and eight-sensor subsets of B and C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 6 · Depth and sensor number both matter.</strong> Four-sensor comparisons help distinguish placement effects from the benefit of using eight sensors. Error bars are shown in the paper’s supplementary figures.</figcaption></figure>
-        <div class="finding"><h3>Fine resolution and spatial coverage interact</h3><p>The paper interprets B’s advantage at 10 mm through the narrower receptive fields of superficial sensors. At 15 mm, randomized contacts can extend beyond the 20 × 20 mm sensor region; deeper sensors’ broader receptive fields can then help. C with all eight sensors also performs well, sometimes exceeding B. The results depend on spacing, sensor count, and the finite sensing area.</p></div>
-        <details class="research-detail">
-          <summary>Pressure waveforms and evaluation procedure · Fig. 5</summary>
-          <p>HIRO-NX applies 100 indentations per condition, with randomized position, orientation, and depth. Varying depth prevents a fixed force difference from becoming a simple cue for one versus two contacts. A Random Forest classifier uses response peaks, evaluated with five-fold stratified cross-validation repeated with three random seeds.</p>
-          <figure id="figure-5"><a class="zoomable" href="assets/img/pressure-responses.png" aria-label="Enlarge Figure 5: pressure response waveforms"><img src="assets/img/pressure-responses.png" width="2400" height="1344" loading="lazy" alt="Figure 5: strain-gauge responses in A, B, and C during 15 mm two-point indentation, showing weaker responses in A"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 5 · The signals behind spatial classification.</strong> Representative responses from four sensors per arrangement. The accompanying statistics show stronger, more variable pressure responses for the more superficial placement.</figcaption></figure>
-        </details>
+        <div class="result-pair">
+          <div class="result-copy">
+            <p class="section-kicker">TASK 01 · SPATIAL RESOLUTION · HIRO-NX</p>
+            <h2 id="spatial-title">Distinguishing one contact from two</h2>
+            <p>One-point stimuli and two-point stimuli separated by 5, 10, or 15 mm are classified from strain-gauge response peaks. This asks how sensor depth and number affect spatial discrimination in the skin.</p>
+            <p>Using four sensors per arrangement, B shows a pronounced improvement at 10 mm. Using all eight sensors in B and C further improves performance relative to their four shallower sensors alone.</p>
+            <div class="finding"><h3>Fine resolution and spatial coverage interact</h3><p>The paper interprets B’s advantage at 10 mm through the narrower receptive fields of superficial sensors. At 15 mm, randomized contacts can extend beyond the 20 × 20 mm sensor region; deeper sensors’ broader receptive fields can then help. C with all eight sensors also performs well, sometimes exceeding B. The results depend on spacing, sensor count, and the finite sensing area.</p></div>
+          </div>
+          <div class="result-visual">
+            <figure id="figure-6"><a class="zoomable" href="assets/img/spatial-discrimination.png" aria-label="Enlarge Figure 6: spatial discrimination results"><img src="assets/img/spatial-discrimination.png" width="1800" height="1097" loading="lazy" alt="Figure 6: single- versus two-point classification accuracy at 5, 10, and 15 mm for A and for four- and eight-sensor subsets of B and C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 6 · Depth and sensor number both matter.</strong> Four-sensor comparisons help distinguish placement effects from the benefit of using eight sensors. Error bars are shown in the paper’s supplementary figures.</figcaption></figure>
+            <details class="research-detail">
+              <summary>Pressure waveforms and evaluation procedure · Fig. 5</summary>
+              <p>HIRO-NX applies 100 indentations per condition, with randomized position, orientation, and depth. Varying depth prevents a fixed force difference from becoming a simple cue for one versus two contacts. A Random Forest classifier uses response peaks, evaluated with five-fold stratified cross-validation repeated with three random seeds.</p>
+              <figure id="figure-5"><a class="zoomable" href="assets/img/pressure-responses.png" aria-label="Enlarge Figure 5: pressure response waveforms"><img src="assets/img/pressure-responses.png" width="2400" height="1344" loading="lazy" alt="Figure 5: strain-gauge responses in A, B, and C during 15 mm two-point indentation, showing weaker responses in A"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 5 · The signals behind spatial classification.</strong> Representative responses from four sensors per arrangement. The accompanying statistics show stronger, more variable pressure responses for the more superficial placement.</figcaption></figure>
+            </details>
+          </div>
+        </div>
       </section>
 
       <section id="weak-contact" class="section task-section" aria-labelledby="contact-sensitivity-title">
-        <p class="section-kicker">TASK 02 · CONTACT SENSITIVITY · HIRO-NX</p>
-        <h2 id="contact-sensitivity-title">Detecting a very light touch</h2>
-        <p>This task tests sensitivity to weak contact, complementing the spatial classification task. HIRO-NX repeats 20 light contacts at randomized positions. A peak counts as a detection when it exceeds a threshold derived from responses transmitted while a neighboring arrangement is pressed (μ + 2σ).</p>
-        <div class="detection-chart" role="img" aria-label="Weak-contact detections out of 20 trials: Pattern A, 0; Pattern B, 17; Pattern C, 3.">
-          <div class="chart-row"><span>Pattern A</span><span class="track"><span class="fill fill-a" style="width:0%"></span></span><strong>0<span> / 20</span></strong></div>
-          <div class="chart-row"><span>Pattern B</span><span class="track"><span class="fill fill-b" style="width:85%"></span></span><strong>17<span> / 20</span></strong></div>
-          <div class="chart-row"><span>Pattern C</span><span class="track"><span class="fill fill-c" style="width:15%"></span></span><strong>3<span> / 20</span></strong></div>
-          <p class="chart-source">Detected weak-contact events · 20 trials per arrangement · Table 3</p>
+        <div class="result-pair">
+          <div class="result-copy">
+            <p class="section-kicker">TASK 02 · CONTACT SENSITIVITY · HIRO-NX</p>
+            <h2 id="contact-sensitivity-title">Detecting a very light touch</h2>
+            <p>This task tests sensitivity to weak contact, complementing the spatial classification task. HIRO-NX repeats 20 light contacts at randomized positions. A peak counts as a detection when it exceeds a threshold derived from responses transmitted while a neighboring arrangement is pressed (μ + 2σ).</p>
+            <div class="finding"><h3>Superficial pressure sensors favor local sensitivity</h3><p>B detects 17 of 20 contacts, compared with 3 for C and none for A. The discussion links deeper placement to broader receptive fields and more cross-activation by neighboring stimuli. Together with Task 01, this supports an advantage of superficial pressure sensing for subtle, localized contact within the tested configurations.</p></div>
+          </div>
+          <div class="result-visual">
+            <div class="detection-chart" role="img" aria-label="Weak-contact detections out of 20 trials: Pattern A, 0; Pattern B, 17; Pattern C, 3.">
+              <div class="chart-row"><span>Pattern A</span><span class="track"><span class="fill fill-a" style="width:0%"></span></span><strong>0<span> / 20</span></strong></div>
+              <div class="chart-row"><span>Pattern B</span><span class="track"><span class="fill fill-b" style="width:85%"></span></span><strong>17<span> / 20</span></strong></div>
+              <div class="chart-row"><span>Pattern C</span><span class="track"><span class="fill fill-c" style="width:15%"></span></span><strong>3<span> / 20</span></strong></div>
+              <p class="chart-source">Detected weak-contact events · 20 trials per arrangement · Table 3</p>
+            </div>
+          </div>
         </div>
-        <div class="finding"><h3>Superficial pressure sensors favor local sensitivity</h3><p>B detects 17 of 20 contacts, compared with 3 for C and none for A. The discussion links deeper placement to broader receptive fields and more cross-activation by neighboring stimuli. Together with Task 01, this supports an advantage of superficial pressure sensing for subtle, localized contact within the tested configurations.</p></div>
       </section>
 
       <section id="texture" class="section task-section" aria-labelledby="texture-title">
-        <p class="section-kicker">TASK 03 · TEXTURE INFORMATION · PR2</p>
-        <h2 id="texture-title">Reading material differences through vibration</h2>
-        <p>PR2 strokes metal, cloth, cork, and roughened cork across the skin at 2, 3, and 6 cm/s. This task examines both material classification and how sensor placement changes the vibration information available to the classifier.</p>
-        <h3 class="result-heading">From waveforms to frequency-domain features</h3>
-        <p>Material-dependent acceleration waveforms are segmented and analyzed in the frequency domain. Features include RMS amplitude, dominant frequency, spectral centroid, spectral bandwidth, and zero-crossing rate. The waveforms and Fourier analysis in Fig. 7 show the physical signals underlying texture identification.</p>
-        <figure id="figure-7"><a class="zoomable" href="assets/img/texture-signals.png" aria-label="Enlarge Figure 7: texture waveforms and Fourier analysis"><img src="assets/img/texture-signals.png" width="2091" height="2400" loading="lazy" alt="Figure 7: acceleration waveforms for metal, cloth, cork, and rough cork at 3 cm/s, followed by cloth Fourier spectra marking dominant frequency and spectral centroid"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 7 · Signals and spectral analysis.</strong> (a) Responses to the four materials at 3 cm/s. (b) Example Fourier analysis of cloth responses at the same speed.</figcaption></figure>
-        <h3 class="result-heading">High classification accuracy across arrangements</h3>
-        <p>Random Forest classifiers are trained separately at each stroking speed, with five strokes per material and five-fold cross-validation. B achieves 95%, 95%, and 90% accuracy. All three arrangements support texture identification; C reaches 100% at 6 cm/s, so B does not lead at every speed.</p>
-        <div class="texture-results">
-          <div class="chart-toolbar"><span>Stroking speed</span><div class="speed-controls" role="group" aria-label="Choose stroking speed"><button type="button" data-speed="2" aria-pressed="true">2 cm/s</button><button type="button" data-speed="3" aria-pressed="false">3 cm/s</button><button type="button" data-speed="6" aria-pressed="false">6 cm/s</button></div></div>
-          <div id="texture-chart" role="img" aria-label="Texture classification at 2 centimeters per second: Pattern A 90%, Pattern B 95%, Pattern C 95%.">
-            <div class="chart-row"><span>Pattern A</span><span class="track"><span class="fill fill-a" data-bar="a" style="width:90%"></span></span><strong data-value="a">90%</strong></div>
-            <div class="chart-row"><span>Pattern B</span><span class="track"><span class="fill fill-b" data-bar="b" style="width:95%"></span></span><strong data-value="b">95%</strong></div>
-            <div class="chart-row"><span>Pattern C</span><span class="track"><span class="fill fill-c" data-bar="c" style="width:95%"></span></span><strong data-value="c">95%</strong></div>
+        <div class="result-pair">
+          <div class="result-copy">
+            <p class="section-kicker">TASK 03 · TEXTURE INFORMATION · PR2</p>
+            <h2 id="texture-title">Reading material differences through vibration</h2>
+            <p>PR2 strokes metal, cloth, cork, and roughened cork across the skin at 2, 3, and 6 cm/s. This task examines both material classification and how sensor placement changes the vibration information available to the classifier.</p>
+            <h3 class="result-heading">From waveforms to frequency-domain features</h3>
+            <p>Material-dependent acceleration waveforms are segmented and analyzed in the frequency domain. Features include RMS amplitude, dominant frequency, spectral centroid, spectral bandwidth, and zero-crossing rate. The waveforms and Fourier analysis in Fig. 7 show the physical signals underlying texture identification.</p>
           </div>
-          <p class="chart-source" id="speed-summary" aria-live="polite">At 2 cm/s, Patterns B and C both reach 95%.</p>
-          <details><summary>View all reported values</summary><table><caption>Texture classification accuracy (Table 4)</caption><thead><tr><th scope="col">Speed</th><th scope="col">Pattern A</th><th scope="col">Pattern B</th><th scope="col">Pattern C</th></tr></thead><tbody><tr><th scope="row">2 cm/s</th><td>90%</td><td>95%</td><td>95%</td></tr><tr><th scope="row">3 cm/s</th><td>90%</td><td>95%</td><td>75%</td></tr><tr><th scope="row">6 cm/s</th><td>90%</td><td>90%</td><td>100%</td></tr></tbody></table></details>
+          <div class="result-visual">
+            <figure id="figure-7"><a class="zoomable" href="assets/img/texture-signals.png" aria-label="Enlarge Figure 7: texture waveforms and Fourier analysis"><img src="assets/img/texture-signals.png" width="2091" height="2400" loading="lazy" alt="Figure 7: acceleration waveforms for metal, cloth, cork, and rough cork at 3 cm/s, followed by cloth Fourier spectra marking dominant frequency and spectral centroid"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 7 · Signals and spectral analysis.</strong> (a) Responses to the four materials at 3 cm/s. (b) Example Fourier analysis of cloth responses at the same speed.</figcaption></figure>
+          </div>
         </div>
-        <h3 class="result-heading">Placement changes the feature distribution, too</h3>
-        <p>Classification accuracy alone does not describe the differences between arrangements. Fig. 8 plots RMS amplitude against spectral centroid: two features associated in prior work with texture roughness and fineness. A’s superficial accelerometer produces larger amplitude differences between materials and greater dispersion of spectral-centroid values. Covariance-trace statistics in Table 5 further support greater feature dispersion in A.</p>
-        <figure id="figure-8"><a class="zoomable" href="assets/img/texture-features.png" aria-label="Enlarge Figure 8: texture feature distributions"><img src="assets/img/texture-features.png" width="2264" height="2400" loading="lazy" alt="Figure 8: RMS amplitude versus spectral centroid for four materials, comparing A, B, and C at 6, 3, and 2 cm/s; A shows larger material-dependent amplitude differences and greater feature dispersion"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 8 · Information structure across arrangements.</strong> Rows show 6, 3, and 2 cm/s; columns show A, B, and C. These two-dimensional projections complement the classification results, which use a larger feature set.</figcaption></figure>
-        <div class="finding"><h3>Richer vibration information comes with greater dispersion</h3><p>The discussion suggests that less overlying tissue in A reduces mechanical filtering, transmitting a wider range of vibrations. Greater feature dispersion may affect discrimination stability, while stronger material-dependent RMS differences suggest potential for vibration-focused sensing. This is a functional property of the counterfactual arrangement that the accuracy scores alone would miss.</p></div>
+        <div class="result-pair">
+          <div class="result-copy">
+            <h3 class="result-heading">High classification accuracy across arrangements</h3>
+            <p>Random Forest classifiers are trained separately at each stroking speed, with five strokes per material and five-fold cross-validation. B achieves 95%, 95%, and 90% accuracy. All three arrangements support texture identification; C reaches 100% at 6 cm/s, so B does not lead at every speed.</p>
+          </div>
+          <div class="result-visual">
+            <div class="texture-results">
+              <div class="chart-toolbar"><span>Stroking speed</span><div class="speed-controls" role="group" aria-label="Choose stroking speed"><button type="button" data-speed="2" aria-pressed="true">2 cm/s</button><button type="button" data-speed="3" aria-pressed="false">3 cm/s</button><button type="button" data-speed="6" aria-pressed="false">6 cm/s</button></div></div>
+              <div id="texture-chart" role="img" aria-label="Texture classification at 2 centimeters per second: Pattern A 90%, Pattern B 95%, Pattern C 95%.">
+                <div class="chart-row"><span>Pattern A</span><span class="track"><span class="fill fill-a" data-bar="a" style="width:90%"></span></span><strong data-value="a">90%</strong></div>
+                <div class="chart-row"><span>Pattern B</span><span class="track"><span class="fill fill-b" data-bar="b" style="width:95%"></span></span><strong data-value="b">95%</strong></div>
+                <div class="chart-row"><span>Pattern C</span><span class="track"><span class="fill fill-c" data-bar="c" style="width:95%"></span></span><strong data-value="c">95%</strong></div>
+              </div>
+              <p class="chart-source" id="speed-summary" aria-live="polite">At 2 cm/s, Patterns B and C both reach 95%.</p>
+              <details><summary>View all reported values</summary><table><caption>Texture classification accuracy (Table 4)</caption><thead><tr><th scope="col">Speed</th><th scope="col">Pattern A</th><th scope="col">Pattern B</th><th scope="col">Pattern C</th></tr></thead><tbody><tr><th scope="row">2 cm/s</th><td>90%</td><td>95%</td><td>95%</td></tr><tr><th scope="row">3 cm/s</th><td>90%</td><td>95%</td><td>75%</td></tr><tr><th scope="row">6 cm/s</th><td>90%</td><td>90%</td><td>100%</td></tr></tbody></table></details>
+            </div>
+          </div>
+        </div>
+        <div class="result-pair">
+          <div class="result-copy">
+            <h3 class="result-heading">Placement changes the feature distribution, too</h3>
+            <p>Classification accuracy alone does not describe the differences between arrangements. Fig. 8 plots RMS amplitude against spectral centroid: two features associated in prior work with texture roughness and fineness. A’s superficial accelerometer produces larger amplitude differences between materials and greater dispersion of spectral-centroid values. Covariance-trace statistics in Table 5 further support greater feature dispersion in A.</p>
+            <div class="finding"><h3>Richer vibration information comes with greater dispersion</h3><p>The discussion suggests that less overlying tissue in A reduces mechanical filtering, transmitting a wider range of vibrations. Greater feature dispersion may affect discrimination stability, while stronger material-dependent RMS differences suggest potential for vibration-focused sensing. This is a functional property of the counterfactual arrangement that the accuracy scores alone would miss.</p></div>
+          </div>
+          <div class="result-visual">
+            <figure id="figure-8"><a class="zoomable" href="assets/img/texture-features.png" aria-label="Enlarge Figure 8: texture feature distributions"><img src="assets/img/texture-features.png" width="2264" height="2400" loading="lazy" alt="Figure 8: RMS amplitude versus spectral centroid for four materials, comparing A, B, and C at 6, 3, and 2 cm/s; A shows larger material-dependent amplitude differences and greater feature dispersion"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 8 · Information structure across arrangements.</strong> Rows show 6, 3, and 2 cm/s; columns show A, B, and C. These two-dimensional projections complement the classification results, which use a larger feature set.</figcaption></figure>
+          </div>
+        </div>
       </section>
 
       <section id="tradeoffs" class="section" aria-labelledby="tradeoffs-title">
-        <p class="section-kicker">BRINGING THE THREE TASKS TOGETHER</p>
-        <h2 id="tradeoffs-title">Which tactile functions should an arrangement favor?</h2>
-        <p>The three tasks probe different consequences of the same sensor organization: spatial resolution, sensitivity to light contact, and texture information. The Tactile Discrimination Performance Index (TDPI) combines their normalized performance while allowing their relative weights to vary.</p>
-        <figure id="figure-9"><a class="zoomable" href="assets/img/task-tradeoffs.png" aria-label="Enlarge Figure 9: task-weight-dependent arrangement comparison"><img src="assets/img/task-tradeoffs.png" width="1800" height="966" loading="lazy" alt="Figure 9: preferred arrangement under different weightings of texture classification, weak-contact detection, and spatial discrimination, comparing all patterns and A versus C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 9 · Task-dependent preferences.</strong> (a) A, B, and C compared. (b) A and C compared. The texture-accuracy variability penalty is fixed at λ = 0.2.</figcaption></figure>
-        <p>B performs well over a broad range of task weights. Comparing A and C reveals a further tradeoff: A becomes favorable in some regions emphasizing texture, while C is favored when weak-contact detection is weighted more heavily. The value of an arrangement therefore depends on which tactile functions matter.</p>
-        <details class="research-detail"><summary>How to interpret TDPI</summary><p>Performance is adjusted for chance level where applicable and standardized across arrangements. Spatial-task performance averages the three tested contact separations. The index then combines the task scores with a variability penalty applied only to texture-classification accuracy across stroking speeds.</p><p>This across-speed accuracy penalty is distinct from the feature dispersion shown in Fig. 8. TDPI is an auxiliary summary of trends within this experiment, rather than a universal scale of tactile ability. The paper also examines the effect of changing the penalty coefficient.</p></details>
+        <div class="result-pair">
+          <div class="result-copy">
+            <p class="section-kicker">BRINGING THE THREE TASKS TOGETHER</p>
+            <h2 id="tradeoffs-title">Which tactile functions should an arrangement favor?</h2>
+            <p>The three tasks probe different consequences of the same sensor organization: spatial resolution, sensitivity to light contact, and texture information. The Tactile Discrimination Performance Index (TDPI) combines their normalized performance while allowing their relative weights to vary.</p>
+            <p>B performs well over a broad range of task weights. Comparing A and C reveals a further tradeoff: A becomes favorable in some regions emphasizing texture, while C is favored when weak-contact detection is weighted more heavily. The value of an arrangement therefore depends on which tactile functions matter.</p>
+            <details class="research-detail"><summary>How to interpret TDPI</summary><p>Performance is adjusted for chance level where applicable and standardized across arrangements. Spatial-task performance averages the three tested contact separations. The index then combines the task scores with a variability penalty applied only to texture-classification accuracy across stroking speeds.</p><p>This across-speed accuracy penalty is distinct from the feature dispersion shown in Fig. 8. TDPI is an auxiliary summary of trends within this experiment, rather than a universal scale of tactile ability. The paper also examines the effect of changing the penalty coefficient.</p></details>
+          </div>
+          <div class="result-visual">
+            <figure id="figure-9"><a class="zoomable" href="assets/img/task-tradeoffs.png" aria-label="Enlarge Figure 9: task-weight-dependent arrangement comparison"><img src="assets/img/task-tradeoffs.png" width="1800" height="966" loading="lazy" alt="Figure 9: preferred arrangement under different weightings of texture classification, weak-contact detection, and spatial discrimination, comparing all patterns and A versus C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 9 · Task-dependent preferences.</strong> (a) A, B, and C compared. (b) A and C compared. The texture-accuracy variability penalty is fixed at λ = 0.2.</figcaption></figure>
+          </div>
+        </div>
       </section>
 
+    </div>
+
+    <div class="content">
       <section id="discussion" class="section" aria-labelledby="discussion-title">
         <p class="section-kicker">DISCUSSION</p>
         <h2 id="discussion-title">Sensory organization in relation to behavior</h2>
