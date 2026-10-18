@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/sitemap.xml
