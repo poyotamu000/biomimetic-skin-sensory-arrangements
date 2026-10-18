@@ -22,7 +22,7 @@ Open http://localhost:8000/. No installation or build is required.
 - `assets/main.js`: figure enlargement, texture-result comparison, and citation copying.
 - `assets/img/`: research figures rendered from the paper's PDFs.
 
-Once an arXiv identifier is assigned, its abstract URL can be added to the resource links in `index.html`.
+The arXiv and YouTube resource buttons show **Coming soon** and remain disabled until their URLs are available. To activate either one in `index.html`, find `arxiv-link` or `youtube-link`, replace its `<button … disabled>` / `</button>` tags with `<a class="button" href="YOUR_URL" target="_blank" rel="noopener noreferrer">` / `</a>`, and remove the `button-status` span. Keep the icon and resource name. Use the arXiv abstract URL (`https://arxiv.org/abs/…`) or the published YouTube video URL.
 
 ## Publication
 
