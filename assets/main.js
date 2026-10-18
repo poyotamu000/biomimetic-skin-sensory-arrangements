@@ -27,7 +27,8 @@ document.querySelectorAll('.zoomable').forEach(link => {
     const enlarged = document.getElementById('dialog-image');
     enlarged.src = link.href;
     enlarged.alt = img.alt;
-    document.getElementById('dialog-caption').textContent = img.alt;
+    document.getElementById('dialog-caption').textContent = link.closest('figure')?.querySelector('figcaption')?.textContent || img.alt;
+    document.getElementById('dialog-original').href = link.href;
     dialog.showModal();
   });
 });

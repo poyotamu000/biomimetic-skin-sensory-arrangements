@@ -10,11 +10,11 @@
   <meta property="og:site_name" content="Biomimetic Skin: Sensory Arrangements">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Robotic Physical Comparison of Sensory Arrangements using Biomimetic Skin">
-  <meta property="og:description" content="Three sensory arrangements. Three tactile tasks. A physical approach to understanding how receptor placement shapes touch.">
-  <meta property="og:image" content="https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/assets/img/touch-experiment.png">
-  <meta property="og:image:alt" content="HIRO-NX robot applying controlled touch stimuli to biomimetic skin">
+  <meta property="og:description" content="Three sensory arrangements, two robotic setups, and three complementary tactile tasks: spatial discrimination, weak-contact detection, and texture identification.">
+  <meta property="og:image" content="https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/assets/img/skin-overview.png">
+  <meta property="og:image:alt" content="Layered biomimetic skin with three pressure- and vibration-sensor arrangements">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/assets/img/touch-experiment.png">
+  <meta name="twitter:image" content="https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/assets/img/skin-overview.png">
   <meta name="citation_title" content="Robotic physical comparison of biologically motivated and counterfactual sensory arrangements using biomimetic skin">
   <meta name="citation_author" content="Akihiro Miki">
   <meta name="citation_author" content="Shun Hasegawa">
@@ -36,7 +36,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="topbar wrap" aria-label="Page navigation">
     <a class="wordmark" href="#main"><span class="skin-mark" aria-hidden="true"><i></i><i></i><i></i></span>BIOMIMETIC SKIN</a>
-    <div><a href="#overview">Overview</a><a href="#results">Results</a><a href="#citation">Citation</a></div>
+    <div><a href="#overview">Overview</a><a href="#experiments">Experiments</a><a href="#discussion">Discussion</a><a href="#citation">Citation</a></div>
   </nav>
 
   <main id="main">
@@ -64,77 +64,108 @@
       </div>
     </header>
 
-    <div class="wrap">
-      <figure class="teaser">
-        <div class="teaser-grid">
-          <a class="zoomable" href="assets/img/skin-overview.png" aria-label="Enlarge the biomimetic skin design figure"><span class="image-label">01 / BUILD THE SKIN</span><img src="assets/img/skin-overview.png" width="1657" height="1800" alt="Biological and biomimetic skin layers, pressure and vibration sensing, and sensor arrangements A, B, and C" fetchpriority="high"><span class="zoom-hint" aria-hidden="true">↗</span></a>
-          <a class="zoomable" href="assets/img/touch-experiment.png" aria-label="Enlarge the robotic touch experiment figure"><span class="image-label">02 / COMPARE ITS SENSING</span><img src="assets/img/touch-experiment.png" width="1800" height="1213" alt="HIRO-NX robot and the positioning, pressing, and release sequence used to stimulate the skin" fetchpriority="high"><span class="zoom-hint" aria-hidden="true">↗</span></a>
+    <section id="overview" class="section wrap" aria-labelledby="overview-title">
+      <div class="study-intro">
+        <div class="study-copy">
+          <p class="section-kicker">ONE BIOLOGICAL QUESTION</p>
+          <h2 id="overview-title">How does receptor arrangement shape touch?</h2>
+          <p>Pressure-sensitive and vibration-sensitive receptors occupy different depths in human skin. What does this organization contribute to tactile function—and what changes when we rearrange it?</p>
+          <p>We build a layered, compliant skin with three sensory arrangements, including alternatives that are difficult to test in living systems. Two robotic setups deliver controlled stimuli to the same skin design, probing three complementary aspects of passive touch.</p>
+          <p class="study-takeaway">The comparison reveals a relationship between <strong>spatial sensitivity, vibration transmission, and the tactile task being performed.</strong></p>
         </div>
-        <figcaption>A physical platform for asking how the spatial arrangement of receptors shapes tactile function.</figcaption>
-      </figure>
-      <div class="highlights" aria-label="Study at a glance">
-        <div><strong>3 tissue layers</strong><span>Epidermis, dermis &amp; subcutaneous tissue</span></div>
-        <div><strong>3 sensory arrangements</strong><span>Biologically motivated &amp; counterfactual</span></div>
-        <div><strong>3 tactile tasks</strong><span>Weak contact, spatial discrimination &amp; texture</span></div>
+        <figure id="figure-1">
+          <a class="zoomable" href="assets/img/skin-overview.png" aria-label="Enlarge Figure 1: skin structure and sensory arrangements"><img src="assets/img/skin-overview.png" width="1657" height="1800" alt="Figure 1: human and biomimetic skin layers, pressure and vibration sensor analogs, and arrangements A, B, and C" fetchpriority="high"><span class="zoom-hint" aria-hidden="true">↗</span></a>
+          <figcaption><strong>Fig. 1 · The shared experimental platform.</strong> Tissue layers and the relative positions of pressure- and vibration-sensitive elements are the basis of the comparison.</figcaption>
+        </figure>
       </div>
-    </div>
+      <ol class="task-map" aria-label="Three complementary tactile tasks">
+        <li><a href="#spatial"><span class="task-number">01 / SPATIAL RESOLUTION</span><h3>One contact or two?</h3><p>Two-point discrimination-like classification from pressure responses.</p><span class="task-link">Explore the experiment ↓</span></a></li>
+        <li><a href="#weak-contact"><span class="task-number">02 / CONTACT SENSITIVITY</span><h3>Can a light touch be detected?</h3><p>Weak-contact detection against responses transmitted from neighboring regions.</p><span class="task-link">Explore the experiment ↓</span></a></li>
+        <li><a href="#texture"><span class="task-number">03 / TEXTURE INFORMATION</span><h3>Which material is stroking the skin?</h3><p>Texture classification and the structure of vibration-derived features.</p><span class="task-link">Explore the experiment ↓</span></a></li>
+      </ol>
+    </section>
 
     <div class="content">
-      <section id="overview" class="section" aria-labelledby="abstract-title">
-        <p class="section-kicker">THE STUDY</p>
-        <h2 id="abstract-title">Abstract</h2>
-        <div id="abstract-text"><p>Human skin contains diverse mechanoreceptors, including Merkel cells and Pacinian corpuscles, each localized in specific regions. Although their spatial organization is known to be shaped by molecular signaling and neural induction during development, experimentally examining its functional significance under controlled conditions in living systems remains challenging. In particular, physically comparing alternative receptor arrangements that do not occur biologically is difficult.</p><p>In this study, we developed a layered biomimetic robotic skin designed to mimic key structural features of human skin tissue by embedding receptor-analog sensors within compliant soft media. Using this platform, we implemented both biologically motivated and counterfactual sensory arrangements and quantitatively evaluated their performance across three passive tactile tasks: detection of weak contacts, a two-point discrimination-like assessment, and texture identification. Arrangements reflecting key features of the biologically motivated sensory organization exhibited higher performance than the alternative configurations examined. This study addresses a biological question concerning how spatial organization influences tactile function by presenting a biomimetic robotic approach that enables physical and empirical comparison of biologically motivated and counterfactual sensory arrangements that are difficult to investigate in living systems.</p></div>
-      </section>
-
-      <section class="section" aria-labelledby="motivation-title">
-        <p class="section-kicker">THE QUESTION</p>
-        <h2 id="motivation-title">Why does receptor placement matter?</h2>
-        <p>Human skin contains mechanoreceptors with different response properties, distributed at different depths. Their organization develops through molecular signaling and neural induction, making it difficult to independently rearrange receptors in a living system and compare the consequences.</p>
-        <p>This work uses a robot to make that comparison physically possible. Receptor-like sensors are embedded in a soft, layered skin, allowing both biologically motivated arrangements and alternative configurations to be constructed and tested under controlled conditions.</p>
-        <blockquote>How does changing the spatial organization of sensors change what the skin can feel?</blockquote>
-      </section>
-
-      <section class="section" aria-labelledby="design-title">
-        <p class="section-kicker">THE PLATFORM</p>
-        <h2 id="design-title">A tissue-level model of skin</h2>
-        <p>The artificial skin combines a thin silicone-rubber epidermis, a compliant silicone-gel dermis, and a softer silicone-foam subcutaneous layer. Strain gauges act as pressure-sensitive analogs of Merkel cells; accelerometers act as vibration-sensitive analogs of Pacinian corpuscles. The construction preserves selected structural principles of biological skin.</p>
+      <section id="platform" class="section" aria-labelledby="design-title">
+        <p class="section-kicker">WHAT WE VARY</p>
+        <h2 id="design-title">Three arrangements in a tissue-level skin model</h2>
+        <p>The skin combines a silicone-rubber epidermis, a silicone-gel dermis, and a softer silicone-foam subcutaneous layer. Strain gauges provide pressure-sensitive analogs of Merkel cells; accelerometers provide vibration-sensitive analogs of Pacinian corpuscles. Pattern B preserves their qualitative biological depth relationship, while A and C change it within the constraints of physical construction.</p>
         <div class="arrangements">
-          <article class="arrangement"><span class="pattern pattern-a">A</span><h3>Surface vibration sensing</h3><p>An accelerometer near the surface, with four strain gauges embedded deeper in the skin.</p><span class="arrangement-note">Counterfactual arrangement</span></article>
-          <article class="arrangement featured"><span class="pattern pattern-b">B</span><h3>Biologically motivated</h3><p>Eight strain gauges above an accelerometer in the deep dermis, with pressure sensors close to the surface.</p><span class="arrangement-note">Biological organizational principles</span></article>
-          <article class="arrangement"><span class="pattern pattern-c">C</span><h3>Deeper sensory placement</h3><p>Eight strain gauges in deeper layers, above an accelerometer in the deeper subcutaneous region.</p><span class="arrangement-note">Counterfactual arrangement</span></article>
+          <article class="arrangement"><span class="pattern pattern-a">A</span><h3>Vibration sensing near the surface</h3><p>An accelerometer near the surface, with four strain gauges embedded beneath it.</p><span class="arrangement-note">Counterfactual arrangement</span></article>
+          <article class="arrangement featured"><span class="pattern pattern-b">B</span><h3>Biologically motivated organization</h3><p>Eight strain gauges near the epidermal–dermal boundary and just beneath it, above an accelerometer in the deep dermis.</p><span class="arrangement-note">Superficial pressure sensing · deeper vibration sensing</span></article>
+          <article class="arrangement"><span class="pattern pattern-c">C</span><h3>Both sensor types placed deeper</h3><p>Eight strain gauges in the deep dermis and at the dermal–subcutaneous boundary, above a deeper accelerometer.</p><span class="arrangement-note">Counterfactual arrangement</span></article>
         </div>
-        <p class="figure-note">Sensor positions are compared within a 20 × 20 mm skin block. Pattern A accommodates four strain gauges; B and C accommodate eight, with additional comparisons using only their four shallower sensors.</p>
+        <p class="figure-note">Each arrangement occupies a 20 × 20 mm region. Sensor size and mechanical interference limit placement: A contains four strain gauges; B and C contain eight across two depths. Four-sensor subsets of B and C are also compared in the spatial task.</p>
+        <details class="research-detail">
+          <summary>Mechanical characterization of the platform · Fig. 4</summary>
+          <p>Indentation testing provides a mechanical check of the skin before interpreting the tactile tasks. Ten loading–unloading cycles showed hysteresis, consistent with viscoelastic behavior. The estimated reduced Young’s modulus was approximately 15–17 kPa, depending on the contact-area approximation. This is an effective property of the layered sample and supports an approximate comparison with biological skin.</p>
+          <figure id="figure-4"><a class="zoomable" href="assets/img/skin-mechanics.png" aria-label="Enlarge Figure 4: mechanical characterization"><img src="assets/img/skin-mechanics.png" width="2400" height="1040" loading="lazy" alt="Figure 4: indentation apparatus and averaged loading–unloading force–displacement curves with standard deviation"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 4 · Mechanical characterization.</strong> The test samples omit dermal papillae to reduce spatial variability. This validates a property of the platform; it is separate from the three tactile tasks.</figcaption></figure>
+        </details>
+        <details class="research-detail" id="paper-abstract"><summary>Read the paper’s abstract</summary>
+          <div id="abstract-text"><p>Human skin contains diverse mechanoreceptors, including Merkel cells and Pacinian corpuscles, each localized in specific regions. Although their spatial organization is known to be shaped by molecular signaling and neural induction during development, experimentally examining its functional significance under controlled conditions in living systems remains challenging. In particular, physically comparing alternative receptor arrangements that do not occur biologically is difficult.</p><p>In this study, we developed a layered biomimetic robotic skin designed to mimic key structural features of human skin tissue by embedding receptor-analog sensors within compliant soft media. Using this platform, we implemented both biologically motivated and counterfactual sensory arrangements and quantitatively evaluated their performance across three passive tactile tasks: detection of weak contacts, a two-point discrimination-like assessment, and texture identification. Arrangements reflecting key features of the biologically motivated sensory organization exhibited higher performance than the alternative configurations examined. This study addresses a biological question concerning how spatial organization influences tactile function by presenting a biomimetic robotic approach that enables physical and empirical comparison of biologically motivated and counterfactual sensory arrangements that are difficult to investigate in living systems.</p></div>
+        </details>
+      </section>
+    </div>
+
+    <section id="experiments" class="section wrap" aria-labelledby="experiments-title">
+      <div class="section-intro">
+        <p class="section-kicker">HOW WE APPLY STIMULI</p>
+        <h2 id="experiments-title">Two complementary robotic setups</h2>
+        <p>HIRO-NX and PR2 serve as controlled stimulus sources for different modes of contact. The comparison concerns the sensory arrangements in the skin; both setups contribute to evaluating their tactile function.</p>
+      </div>
+      <div class="setup-grid">
+        <article class="setup">
+          <p class="setup-label">HIRO-NX · PRESSING</p>
+          <h3>Spatial discrimination &amp; weak-contact detection</h3>
+          <figure id="figure-2"><a class="zoomable" href="assets/img/touch-experiment.png" aria-label="Enlarge Figure 2: HIRO-NX pressing setup"><img src="assets/img/touch-experiment.png" width="1800" height="1213" loading="lazy" alt="Figure 2: HIRO-NX with interchangeable one- and two-point end effectors, and the indentation sequence"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 2 · Controlled indentation.</strong> Strain-gauge responses are evaluated in Tasks 01 and 02.</figcaption></figure>
+          <p>Precise, repeatable positioning enables one- and two-point stimuli and very light contacts. Randomized positions—and, for spatial discrimination, orientations and indentation depths—test performance across varying contact conditions.</p>
+        </article>
+        <article class="setup">
+          <p class="setup-label">PR2 · STROKING</p>
+          <h3>Texture identification &amp; vibration analysis</h3>
+          <figure id="figure-3"><a class="zoomable" href="assets/img/texture-experiment.png" aria-label="Enlarge Figure 3: PR2 stroking setup"><img src="assets/img/texture-experiment.png" width="1800" height="1305" loading="lazy" alt="Figure 3: PR2 stroking a material across the shared skin, the path across arrangements, and the contact–stroke–release sequence"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 3 · Controlled stroking.</strong> Accelerometer responses are evaluated in Task 03.</figcaption></figure>
+          <p>Compliant, backdrivable arms make PR2 suitable for stroking with less interference from control-induced vibration. A shared path across the arrangements allows simultaneous comparison under the same material stroke.</p>
+        </article>
+      </div>
+    </section>
+
+    <div id="results" class="content">
+      <section id="spatial" class="section task-section" aria-labelledby="spatial-title">
+        <p class="section-kicker">TASK 01 · SPATIAL RESOLUTION · HIRO-NX</p>
+        <h2 id="spatial-title">Distinguishing one contact from two</h2>
+        <p>One-point stimuli and two-point stimuli separated by 5, 10, or 15 mm are classified from strain-gauge response peaks. This asks how sensor depth and number affect spatial discrimination in the skin.</p>
+        <p>Using four sensors per arrangement, B shows a pronounced improvement at 10 mm. Using all eight sensors in B and C further improves performance relative to their four shallower sensors alone.</p>
+        <figure id="figure-6"><a class="zoomable" href="assets/img/spatial-discrimination.png" aria-label="Enlarge Figure 6: spatial discrimination results"><img src="assets/img/spatial-discrimination.png" width="1800" height="1097" loading="lazy" alt="Figure 6: single- versus two-point classification accuracy at 5, 10, and 15 mm for A and for four- and eight-sensor subsets of B and C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 6 · Depth and sensor number both matter.</strong> Four-sensor comparisons help distinguish placement effects from the benefit of using eight sensors. Error bars are shown in the paper’s supplementary figures.</figcaption></figure>
+        <div class="finding"><h3>Fine resolution and spatial coverage interact</h3><p>The paper interprets B’s advantage at 10 mm through the narrower receptive fields of superficial sensors. At 15 mm, randomized contacts can extend beyond the 20 × 20 mm sensor region; deeper sensors’ broader receptive fields can then help. C with all eight sensors also performs well, sometimes exceeding B. The results depend on spacing, sensor count, and the finite sensing area.</p></div>
+        <details class="research-detail">
+          <summary>Pressure waveforms and evaluation procedure · Fig. 5</summary>
+          <p>HIRO-NX applies 100 indentations per condition, with randomized position, orientation, and depth. Varying depth prevents a fixed force difference from becoming a simple cue for one versus two contacts. A Random Forest classifier uses response peaks, evaluated with five-fold stratified cross-validation repeated with three random seeds.</p>
+          <figure id="figure-5"><a class="zoomable" href="assets/img/pressure-responses.png" aria-label="Enlarge Figure 5: pressure response waveforms"><img src="assets/img/pressure-responses.png" width="2400" height="1344" loading="lazy" alt="Figure 5: strain-gauge responses in A, B, and C during 15 mm two-point indentation, showing weaker responses in A"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 5 · The signals behind spatial classification.</strong> Representative responses from four sensors per arrangement. The accompanying statistics show stronger, more variable pressure responses for the more superficial placement.</figcaption></figure>
+        </details>
       </section>
 
-      <section class="section" aria-labelledby="experiments-title">
-        <p class="section-kicker">THE EXPERIMENTS</p>
-        <h2 id="experiments-title">Three ways to probe tactile function</h2>
-        <ol class="tasks">
-          <li><span class="task-number">01</span><div><h3>Weak-contact detection</h3><p>Detect small contact events from strain-gauge signals using a threshold based on background responses.</p></div></li>
-          <li><span class="task-number">02</span><div><h3>Two-point discrimination</h3><p>Use HIRO-NX to apply single-point and two-point stimuli, comparing classification accuracy as their spacing changes from 5 to 15 mm.</p></div></li>
-          <li><span class="task-number">03</span><div><h3>Texture identification</h3><p>Use PR2 to stroke metal, cloth, cork, and roughened cork over the skin at 2, 3, and 6 cm/s. Classify textures using features extracted from the vibration signals.</p></div></li>
-        </ol>
-        <figure><a class="zoomable" href="assets/img/texture-experiment.png" aria-label="Enlarge the PR2 texture experiment"><img src="assets/img/texture-experiment.png" width="1800" height="1305" loading="lazy" alt="PR2 stroking different test materials over the biomimetic skin, with close-ups of the contact sequence"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>PR2 provides controlled stroking stimuli for comparing vibration-based texture identification. Figure 3 of the paper.</figcaption></figure>
-      </section>
-
-      <section id="results" class="section" aria-labelledby="results-title">
-        <p class="section-kicker">THE FINDINGS</p>
-        <h2 id="results-title">Arrangement changes tactile performance</h2>
-        <h3 class="result-heading">Superficial pressure sensors detect weaker contacts</h3>
-        <p>Pattern B detected 17 of 20 weak-contact events, compared with 3 for Pattern C and none for Pattern A. These measurements support the benefit of placing pressure-sensitive elements near the surface for this task.</p>
+      <section id="weak-contact" class="section task-section" aria-labelledby="contact-sensitivity-title">
+        <p class="section-kicker">TASK 02 · CONTACT SENSITIVITY · HIRO-NX</p>
+        <h2 id="contact-sensitivity-title">Detecting a very light touch</h2>
+        <p>This task tests sensitivity to weak contact, complementing the spatial classification task. HIRO-NX repeats 20 light contacts at randomized positions. A peak counts as a detection when it exceeds a threshold derived from responses transmitted while a neighboring arrangement is pressed (μ + 2σ).</p>
         <div class="detection-chart" role="img" aria-label="Weak-contact detections out of 20 trials: Pattern A, 0; Pattern B, 17; Pattern C, 3.">
           <div class="chart-row"><span>Pattern A</span><span class="track"><span class="fill fill-a" style="width:0%"></span></span><strong>0<span> / 20</span></strong></div>
           <div class="chart-row"><span>Pattern B</span><span class="track"><span class="fill fill-b" style="width:85%"></span></span><strong>17<span> / 20</span></strong></div>
           <div class="chart-row"><span>Pattern C</span><span class="track"><span class="fill fill-c" style="width:15%"></span></span><strong>3<span> / 20</span></strong></div>
-          <p class="chart-source">Weak-contact detections · 20 trials per arrangement · Table 3</p>
+          <p class="chart-source">Detected weak-contact events · 20 trials per arrangement · Table 3</p>
         </div>
+        <div class="finding"><h3>Superficial pressure sensors favor local sensitivity</h3><p>B detects 17 of 20 contacts, compared with 3 for C and none for A. The discussion links deeper placement to broader receptive fields and more cross-activation by neighboring stimuli. Together with Task 01, this supports an advantage of superficial pressure sensing for subtle, localized contact within the tested configurations.</p></div>
+      </section>
 
-        <h3 class="result-heading">Depth and density affect spatial discrimination</h3>
-        <p>Classification accuracy generally improved as the distance between contact points increased. Pattern B showed a pronounced improvement at 10 mm. Using all eight sensors in Patterns B and C improved performance relative to using their four shallower sensors alone. Performance at wider spacing also depended on the receptive field and the finite size of the sensor region.</p>
-        <figure><a class="zoomable" href="assets/img/spatial-discrimination.png" aria-label="Enlarge the spatial discrimination results"><img src="assets/img/spatial-discrimination.png" width="1800" height="1097" loading="lazy" alt="Classification accuracy for single-point versus two-point stimuli at 5, 10, and 15 millimeters, comparing arrangements A, B, and C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>Spatial discrimination across sensor arrangements and sensor subsets. Error bars are provided in the paper’s supplementary figures. Figure 6.</figcaption></figure>
-
-        <h3 class="result-heading">Texture classification depends on the stroking condition</h3>
-        <p>All arrangements supported texture identification. Pattern B achieved 95%, 95%, and 90% classification accuracy at 2, 3, and 6 cm/s, respectively. The table also shows that Pattern C reached 100% at 6 cm/s: no arrangement was uniquely best at every speed.</p>
+      <section id="texture" class="section task-section" aria-labelledby="texture-title">
+        <p class="section-kicker">TASK 03 · TEXTURE INFORMATION · PR2</p>
+        <h2 id="texture-title">Reading material differences through vibration</h2>
+        <p>PR2 strokes metal, cloth, cork, and roughened cork across the skin at 2, 3, and 6 cm/s. This task examines both material classification and how sensor placement changes the vibration information available to the classifier.</p>
+        <h3 class="result-heading">From waveforms to frequency-domain features</h3>
+        <p>Material-dependent acceleration waveforms are segmented and analyzed in the frequency domain. Features include RMS amplitude, dominant frequency, spectral centroid, spectral bandwidth, and zero-crossing rate. The waveforms and Fourier analysis in Fig. 7 show the physical signals underlying texture identification.</p>
+        <figure id="figure-7"><a class="zoomable" href="assets/img/texture-signals.png" aria-label="Enlarge Figure 7: texture waveforms and Fourier analysis"><img src="assets/img/texture-signals.png" width="2091" height="2400" loading="lazy" alt="Figure 7: acceleration waveforms for metal, cloth, cork, and rough cork at 3 cm/s, followed by cloth Fourier spectra marking dominant frequency and spectral centroid"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 7 · Signals and spectral analysis.</strong> (a) Responses to the four materials at 3 cm/s. (b) Example Fourier analysis of cloth responses at the same speed.</figcaption></figure>
+        <h3 class="result-heading">High classification accuracy across arrangements</h3>
+        <p>Random Forest classifiers are trained separately at each stroking speed, with five strokes per material and five-fold cross-validation. B achieves 95%, 95%, and 90% accuracy. All three arrangements support texture identification; C reaches 100% at 6 cm/s, so B does not lead at every speed.</p>
         <div class="texture-results">
           <div class="chart-toolbar"><span>Stroking speed</span><div class="speed-controls" role="group" aria-label="Choose stroking speed"><button type="button" data-speed="2" aria-pressed="true">2 cm/s</button><button type="button" data-speed="3" aria-pressed="false">3 cm/s</button><button type="button" data-speed="6" aria-pressed="false">6 cm/s</button></div></div>
           <div id="texture-chart" role="img" aria-label="Texture classification at 2 centimeters per second: Pattern A 90%, Pattern B 95%, Pattern C 95%.">
@@ -145,17 +176,28 @@
           <p class="chart-source" id="speed-summary" aria-live="polite">At 2 cm/s, Patterns B and C both reach 95%.</p>
           <details><summary>View all reported values</summary><table><caption>Texture classification accuracy (Table 4)</caption><thead><tr><th scope="col">Speed</th><th scope="col">Pattern A</th><th scope="col">Pattern B</th><th scope="col">Pattern C</th></tr></thead><tbody><tr><th scope="row">2 cm/s</th><td>90%</td><td>95%</td><td>95%</td></tr><tr><th scope="row">3 cm/s</th><td>90%</td><td>95%</td><td>75%</td></tr><tr><th scope="row">6 cm/s</th><td>90%</td><td>90%</td><td>100%</td></tr></tbody></table></details>
         </div>
-
-        <h3 class="result-heading">A balance across tactile tasks</h3>
-        <p>The study combines task performance in a Tactile Discrimination Performance Index (TDPI), varying the weights of texture classification, light-touch detection, and two-point discrimination. Pattern B performs well over a broad range of weights. When comparing only A and C, the preferred arrangement changes with the tactile function emphasized.</p>
-        <figure><a class="zoomable" href="assets/img/task-tradeoffs.png" aria-label="Enlarge the task weighting comparison"><img src="assets/img/task-tradeoffs.png" width="1800" height="966" loading="lazy" alt="Two triangular heatmaps showing the preferred arrangement across different weightings of the three tactile tasks"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption>Task-weight-dependent comparison of all three patterns (left), and of A versus C (right), with variability penalty λ = 0.2. Figure 9.</figcaption></figure>
+        <h3 class="result-heading">Placement changes the feature distribution, too</h3>
+        <p>Classification accuracy alone does not describe the differences between arrangements. Fig. 8 plots RMS amplitude against spectral centroid: two features associated in prior work with texture roughness and fineness. A’s superficial accelerometer produces larger amplitude differences between materials and greater dispersion of spectral-centroid values. Covariance-trace statistics in Table 5 further support greater feature dispersion in A.</p>
+        <figure id="figure-8"><a class="zoomable" href="assets/img/texture-features.png" aria-label="Enlarge Figure 8: texture feature distributions"><img src="assets/img/texture-features.png" width="2264" height="2400" loading="lazy" alt="Figure 8: RMS amplitude versus spectral centroid for four materials, comparing A, B, and C at 6, 3, and 2 cm/s; A shows larger material-dependent amplitude differences and greater feature dispersion"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 8 · Information structure across arrangements.</strong> Rows show 6, 3, and 2 cm/s; columns show A, B, and C. These two-dimensional projections complement the classification results, which use a larger feature set.</figcaption></figure>
+        <div class="finding"><h3>Richer vibration information comes with greater dispersion</h3><p>The discussion suggests that less overlying tissue in A reduces mechanical filtering, transmitting a wider range of vibrations. Greater feature dispersion may affect discrimination stability, while stronger material-dependent RMS differences suggest potential for vibration-focused sensing. This is a functional property of the counterfactual arrangement that the accuracy scores alone would miss.</p></div>
       </section>
 
-      <section class="section" aria-labelledby="scope-title">
-        <p class="section-kicker">INTERPRETATION</p>
-        <h2 id="scope-title">A physical approach to biological questions</h2>
-        <p>The results suggest that biologically motivated sensory organization can provide advantages across the passive tactile tasks examined here. More broadly, the platform makes alternative body organizations experimentally accessible and connects biological questions with reproducible robotic experiments.</p>
-        <p>The scope is the specific configurations tested. The skin reproduces selected tissue-level features, while sensor dimensions and mechanical constraints limit density and placement. The experiments therefore provide evidence within this design space; they do not establish a universally optimal arrangement or a direct explanation of evolutionary selection.</p>
+      <section id="tradeoffs" class="section" aria-labelledby="tradeoffs-title">
+        <p class="section-kicker">BRINGING THE THREE TASKS TOGETHER</p>
+        <h2 id="tradeoffs-title">Which tactile functions should an arrangement favor?</h2>
+        <p>The three tasks probe different consequences of the same sensor organization: spatial resolution, sensitivity to light contact, and texture information. The Tactile Discrimination Performance Index (TDPI) combines their normalized performance while allowing their relative weights to vary.</p>
+        <figure id="figure-9"><a class="zoomable" href="assets/img/task-tradeoffs.png" aria-label="Enlarge Figure 9: task-weight-dependent arrangement comparison"><img src="assets/img/task-tradeoffs.png" width="1800" height="966" loading="lazy" alt="Figure 9: preferred arrangement under different weightings of texture classification, weak-contact detection, and spatial discrimination, comparing all patterns and A versus C"><span class="zoom-hint" aria-hidden="true">↗</span></a><figcaption><strong>Fig. 9 · Task-dependent preferences.</strong> (a) A, B, and C compared. (b) A and C compared. The texture-accuracy variability penalty is fixed at λ = 0.2.</figcaption></figure>
+        <p>B performs well over a broad range of task weights. Comparing A and C reveals a further tradeoff: A becomes favorable in some regions emphasizing texture, while C is favored when weak-contact detection is weighted more heavily. The value of an arrangement therefore depends on which tactile functions matter.</p>
+        <details class="research-detail"><summary>How to interpret TDPI</summary><p>Performance is adjusted for chance level where applicable and standardized across arrangements. Spatial-task performance averages the three tested contact separations. The index then combines the task scores with a variability penalty applied only to texture-classification accuracy across stroking speeds.</p><p>This across-speed accuracy penalty is distinct from the feature dispersion shown in Fig. 8. TDPI is an auxiliary summary of trends within this experiment, rather than a universal scale of tactile ability. The paper also examines the effect of changing the penalty coefficient.</p></details>
+      </section>
+
+      <section id="discussion" class="section" aria-labelledby="discussion-title">
+        <p class="section-kicker">DISCUSSION</p>
+        <h2 id="discussion-title">Sensory organization in relation to behavior</h2>
+        <div class="discussion-point"><h3>Body structure shapes the information sensors receive</h3><p>Sensor depth changes how deformation and vibration propagate through the tissue. Superficial pressure sensing favors localized contact information; deeper vibration sensing filters the response differently. The robotic design implication is that arrangement within a compliant medium is itself a contributor to multimodal tactile function.</p></div>
+        <div class="discussion-point"><h3>Different tactile demands may favor different organizations</h3><p>B performs well across the passive pressing and stroking tasks studied here. A’s vibration-rich responses suggest another possibility when vibrational cues are especially useful. The paper relates this idea to relatively superficial vibration-sensitive receptors associated with Eimer’s organs in moles and Grandry/Herbst corpuscles in waterfowl beaks.</p><p>These biological examples motivate hypotheses about the relationship between sensory organization, behavior, and environment. The robot experiments do not test those species or establish an evolutionary explanation.</p></div>
+        <div class="discussion-point"><h3>Physical counterfactuals complement biological observation</h3><p>Receptor arrangements are difficult to manipulate independently in living systems. Building both biologically motivated and alternative configurations makes their functional consequences experimentally accessible. Physical implementation also captures contact and frictional phenomena, including stick–slip, that are difficult to model accurately.</p></div>
+        <div class="scope-note"><h3>What the comparison establishes—and its limits</h3><p>The results describe three realizable configurations in a simplified tissue model. Sensor size, density, and depth are constrained by construction; the arrangements do not reproduce biological anatomy quantitatively. Rigid accelerometer packages may also perturb local mechanics, particularly in A.</p><p>Denser, smaller, more compliant sensors and systematic variation of placement are needed to test how broadly these trends hold. The contribution is a physical method for investigating functional consequences of sensory organization, with evidence for advantages and tradeoffs in the design space examined.</p></div>
       </section>
 
       <section id="citation" class="section" aria-labelledby="citation-title">
@@ -179,6 +221,6 @@
     </div>
   </main>
   <footer class="wrap"><span>Akihiro Miki et al. · 2026</span><p>Article and figures: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://doi.org/10.1088/1748-3190/ae7786">Bioinspiration &amp; Biomimetics</a></p><a href="#main">Back to top ↑</a></footer>
-  <dialog id="figure-dialog" aria-label="Enlarged research figure"><button class="dialog-close" type="button" aria-label="Close enlarged figure">Close ×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+  <dialog id="figure-dialog" aria-label="Enlarged research figure"><button class="dialog-close" type="button" aria-label="Close enlarged figure">Close ×</button><img id="dialog-image" alt=""><p id="dialog-caption"></p><p class="dialog-source"><a id="dialog-original" target="_blank" rel="noopener noreferrer">Open full-resolution figure ↗</a></p></dialog>
 </body>
 </html>
