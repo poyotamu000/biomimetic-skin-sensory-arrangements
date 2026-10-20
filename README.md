@@ -6,6 +6,8 @@ Akihiro Miki, Shun Hasegawa, Yoshimoto Ribayashi, Yuta Sahara, Kento Kawaharazuk
 
 - Website: https://poyotamu000.github.io/biomimetic-skin-sensory-arrangements/
 - Paper: https://doi.org/10.1088/1748-3190/ae7786
+- arXiv: https://arxiv.org/abs/2610.26680
+- Video: https://www.youtube.com/watch?v=25HPwOTodQ8
 
 ## Local preview
 
@@ -38,7 +40,7 @@ Figures 1–9 are retained. Figures 4 (mechanical characterization) and 5 (press
 | 8 · Texture feature distributions | `texture-features.png` |
 | 9 · TDPI comparison | `task-tradeoffs.png` |
 
-The arXiv and YouTube resource buttons show **Coming soon** and remain disabled until their URLs are available. To activate either one in `index.html`, find `arxiv-link` or `youtube-link`, replace its `<button … disabled>` / `</button>` tags with `<a class="button" href="YOUR_URL" target="_blank" rel="noopener noreferrer">` / `</a>`, and remove the `button-status` span. Keep the icon and resource name. Use the arXiv abstract URL (`https://arxiv.org/abs/…`) or the published YouTube video URL.
+The arXiv and YouTube resource buttons link to the paper's arXiv abstract page and research video. To update either URL, edit the `href` of `arxiv-link` or `youtube-link` in `index.html` and the corresponding link above.
 
 ## Publication
 
